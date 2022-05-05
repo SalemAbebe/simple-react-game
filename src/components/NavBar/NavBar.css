@@ -1,0 +1,11 @@
+.navBar {
+  background-color: #55bdb1;
+  width: 100%;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gameHeader {
+  font-size: 36px;
+}

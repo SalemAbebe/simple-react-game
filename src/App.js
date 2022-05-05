@@ -1,17 +1,14 @@
 import "./App.css";
-import data from "./data";
-import Card from "./components/Card.js/Card";
+import CardCharacter from "./components/Card/CardCharacter";
+import CardNames from "./components/Card/CardNames";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
     <div className="App">
-      {data.map((data) => (
-        <Card
-          img={data.image}
-          characterName={data.characterName}
-          id={data.id}
-        />
-      ))}
+      <NavBar />
+      {/* <CardCharacter /> */}
+      <CardNames />
     </div>
   );
 }

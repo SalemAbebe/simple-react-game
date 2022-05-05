@@ -1,0 +1,14 @@
+.cardFlex {
+  /* width: 100%; */
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #aaa;
+  justify-content: space-between;
+}
+.cardFlex__4 {
+  flex-grow: 1;
+  /* width: 25%; */
+  height: auto;
+
+  columns: 6 auto;
+}

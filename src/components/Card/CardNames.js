@@ -5,7 +5,7 @@ import "./CardNames.css";
 
 function CardNames() {
   return (
-    <div>
+    <div className="cardFlexWrapper">
       {/* CardNames */}
       <div className="cardFlex">
         <div className="cardFlex__4">

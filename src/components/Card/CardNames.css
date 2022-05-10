@@ -1,14 +1,23 @@
+.cardFlexWrapper {
+  width: 50%;
+  margin-left: 150px;
+  margin-bottom: 40px;
+
+}
+
+
 .cardFlex {
-  /* width: 100%; */
+  padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
   background-color: #aaa;
   justify-content: space-between;
 }
 .cardFlex__4 {
-  flex-grow: 1;
+  /* flex-grow: 1; */
   /* width: 25%; */
-  height: auto;
+  /* height: auto; */
 
-  columns: 6 auto;
+  columns: 4;
+  
 }

@@ -14,7 +14,7 @@
 
 ## Overview
 
-This is a simple desktop game built with react js
+This is a simple desktop guessing game built with react js.
 
 ### The challenge
 
@@ -29,10 +29,22 @@ This is a simple desktop game built with react js
 - Solution URL: []()
 - Live Site URL: []()
 
+### Game Rule
+ 
+
+ -Select a card from carousel. Selected card will flipped and a word will be displayed.
+ - Pick another card from the bord below and card will be flipped and image will displayed. 
+ -If the the name that has been shown on the card from the carousel matches the image, you score a point. 
+
+### My Process
+
+- 
+
+
+
 ### Built with
 
 - Semantic HTML5 markup
-- Custom CSS components
--
+- Custom CSS 
 - [React](https://reactjs.org/)
--
+- [React-slick] (https://react-slick.neostack.com/)

@@ -1,23 +1,28 @@
 .cardFlexWrapper {
-  width: 50%;
-  margin-left: 150px;
-  margin-bottom: 40px;
+  width: 65%;
+  margin: auto;
 
 }
 
 
 .cardFlex {
   padding-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #aaa;
-  justify-content: space-between;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 60% 25%;
 }
 .cardFlex__4 {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  background-color: #aaa;
+  border-radius: 8px;
   /* flex-grow: 1; */
   /* width: 25%; */
   /* height: auto; */
 
-  columns: 4;
+  /* columns: 4; */
   
+}
+.points {
+  background-color: aquamarine;
 }

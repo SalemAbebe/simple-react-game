@@ -2,13 +2,17 @@ import React from "react";
 import "./Card.css";
 
 function Card(props) {
+  const flipCardContainer = document.querySelector(".flip-card-container");
+  flipCardContainer.addEventListener("click", () => {
+    flipCardContainer.classList.toggle("flip");
+  });
   return (
-    <div class="flip-card-container">
-      <div class="flip-card">
-        <div class="flip-card-front">
-          <p> Pick Me! </p>
+    <div className="flip-card-container">
+      <div className="flip-card">
+        <div className="flip-card-front">
+          <p> {props.cardFrontDisplay} </p>
         </div>
-        <div class="flip-card-back">
+        <div className="flip-card-back">
           <p>{props.characterName}</p>
           <img src={props.img} alt="" />
         </div>

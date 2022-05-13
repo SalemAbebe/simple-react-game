@@ -16,7 +16,7 @@
   transition: transform 1s;
   transform-style: preserve-3d;
 }
-.flip-card-container.flip .flip-card {
+.flip-card-container .flip {
   transform: rotateY(180deg);
 }
 /* Position the front and back side */

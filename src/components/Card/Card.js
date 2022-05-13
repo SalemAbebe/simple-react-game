@@ -7,10 +7,10 @@ function Card(props) {
   return (
     <div className="flip-card-container">
       <div className={`flip-card ${flip ? "flip" : ""}`}>
-        <div className="flip-card-front" onclick={() => setFlip(!flip)}>
+        <div className="flip-card-front" onClick={() => setFlip(!flip)}>
           <p> {props.cardFrontDisplay} </p>
         </div>
-        <div className="flip-card-back" onclick={() => setFlip(!flip)}>
+        <div className="flip-card-back" onClick={() => setFlip(!flip)}>
           <p>{props.characterName}</p>
           <img src={props.img} alt="" />
         </div>

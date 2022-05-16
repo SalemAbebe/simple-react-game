@@ -3,6 +3,16 @@ import "./Card.css";
 
 function Card(props) {
   const [flip, setFlip] = useState(false);
+  // const [cards, setCards] = useState([]);
+  // const [turns, setTurns] = useState(0);
+
+  // //shuffle cards
+  // const shuffleCards = () => {
+  //   const shuffledCards = data.sort(() => Math.random() - 0.5);
+  //   setCards(shuffledCards);
+  //   setTurns(0);
+  // };
+  // console.log(cards, turns);
 
   return (
     <div className="flip-card-container">

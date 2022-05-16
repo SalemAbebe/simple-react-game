@@ -63,12 +63,13 @@ export default class MultipleItems extends Component {
         },
       ],
     };
+
     return (
       <div className="carouselContainer">
         <div className="sliderWrapper">
           <Slider {...settings}>
             {data.map((data) => (
-              <Card characterName={data.characterName} id={data.id} />
+              <Card characterName={data.characterName} key={data.id} />
             ))}
           </Slider>
         </div>

@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "../../data";
 import Card from "./Card";
 import "./CardNames.css";
 
 function CardCharacter() {
+  const [cards, setCards] = useState([]);
+  const [turns, setTurns] = useState(0);
+
+  //shuffle cards
+  const shuffleCards = () => {
+    const shuffledCards = data.sort(() => Math.random() - 0.5);
+    setCards(shuffledCards);
+    setTurns(0);
+  };
+  console.log(cards, turns);
   return (
     <div className="cardFlexWrapper">
       <div className="cardFlex">
@@ -13,7 +23,7 @@ function CardCharacter() {
               className="cardPick"
               cardFrontDisplay={data.cardFrontDisplay}
               img={data.image}
-              id={data.id}
+              key={data.id}
             />
           ))}
         </div>
@@ -23,6 +33,9 @@ function CardCharacter() {
           </div>
           <div className="scores">
             <h4>scores:</h4>
+          </div>
+          <div>
+            <button onClick={shuffleCards}>New Game</button>
           </div>
         </div>
       </div>

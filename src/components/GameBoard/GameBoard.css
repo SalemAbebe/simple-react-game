@@ -1,0 +1,15 @@
+.gameWrapper {
+  width: 65%;
+  margin: auto;
+}
+
+.characterWrapper {
+  padding-top: 20px;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 60% 25%;
+}
+
+.points {
+  background-color: aquamarine;
+}

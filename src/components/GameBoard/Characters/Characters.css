@@ -1,0 +1,11 @@
+.charactersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #aaa;
+  border-radius: 8px;
+  /* flex-grow: 1; */
+  /* width: 25%; */
+  /* height: auto; */
+
+  /* columns: 4; */
+}

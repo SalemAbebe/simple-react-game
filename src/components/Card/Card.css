@@ -60,7 +60,7 @@
   height: 125px;
   /* overflow: hidden; */
   border-radius: 0.5rem;
-  margin-left: -2rem;
+  margin-left: 0rem;
 }
 .flip-card-back p {
   text-align: center;

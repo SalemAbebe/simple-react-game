@@ -5,13 +5,13 @@ function CardName(props) {
   const [flipName, setFlipName] = useState(false);
   const choiceName = props.choiceName;
   const setChoiceName = props.setChoiceName;
-
+  const id = props.id;
   const flipCardName = () => {
     setFlipName(!flipName);
 
-    setChoiceName(props.id);
+    setChoiceName(id);
   };
-  // setChoiceName(id);
+  console.log(id);
 
   // console.log(id);
 

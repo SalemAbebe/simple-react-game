@@ -10,6 +10,7 @@ function CardCharacter(props) {
   const flipCardCharacter = (props) => {
     setFlipCharacter(!flipCharacter);
     setChoiceCharacter(id);
+    console.log(id);
   };
 
   return (

@@ -77,6 +77,7 @@ export default function Names(props) {
               setChoiceName={setChoiceName}
               key={data.id}
               className="namesCard"
+              id={data.id}
             />
           ))}
         </Slider>

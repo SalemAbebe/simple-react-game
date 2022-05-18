@@ -5,11 +5,11 @@ import Names from "./Names/Names";
 import Characters from "./Characters/Characters";
 
 function GameBoard() {
-  const [flip, setFlip] = useState(false);
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
   const [choiceName, setChoiceName] = useState();
   const [choiceCharacter, setChoiceCharacter] = useState();
+  const [score, setScore] = useState(0);
 
   //shuffle cards
   const shuffleCards = () => {
@@ -26,9 +26,13 @@ function GameBoard() {
     return array;
   }
   console.log(cards, turns);
-
-  // flip card
-  // const flipCard = () => setFlip(!flip);
+  console.log(choiceName);
+  console.log(choiceCharacter);
+  const cardCompare = () => {
+    if (choiceName === choiceCharacter) {
+      setScore(score + 1);
+    }
+  };
 
   return (
     <div className="gameWrapper">
@@ -48,7 +52,7 @@ function GameBoard() {
             <h4>Attempts: </h4>
           </div>
           <div className="scores">
-            <h4>scores:</h4>
+            <h4>scores:{score}</h4>
           </div>
           <div>
             <button onClick={shuffleCards}>New Game</button>

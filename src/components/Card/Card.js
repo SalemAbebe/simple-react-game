@@ -11,7 +11,7 @@ function Card(props) {
   const id = props.id;
   const flipCard = (data) => {
     setFlip(!flip);
-    // setChoiceName(id);
+    setChoiceName(id);
 
     // console.log(id);
   };

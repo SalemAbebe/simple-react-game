@@ -1,5 +1,8 @@
-.carouselContainer{
-    width:75%;
-    margin: auto;
-    scale: 0.5;
+.carouselContainer {
+  width: 75%;
+  margin: auto;
+  scale: 0.5;
+}
+.namesCard {
+  border: 2px blue solid;
 }

@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "./Names.css";
 import data from "../../../data";
-import Card from "../../Card/Card";
+// import Card from "../../Card/Card";
+import CardName from "../../Card/CardName";
 
 // function SampleNextArrow(props) {
 //   const { className, style, onClick } = props;
@@ -26,7 +27,7 @@ import Card from "../../Card/Card";
 //   );
 // }
 
-export default function Names() {
+export default function Names(props) {
   const settings = {
     infinite: true,
     slidesToShow: 6,
@@ -62,13 +63,21 @@ export default function Names() {
       },
     ],
   };
+  const choiceName = props.choiceName;
+  const setChoiceName = props.setChoiceName;
 
   return (
     <div className="carouselContainer">
       <div className="sliderWrapper">
         <Slider {...settings}>
           {data.map((data) => (
-            <Card characterName={data.characterName} key={data.id} />
+            <CardName
+              name={data.name}
+              choiceName={choiceName}
+              setChoiceName={setChoiceName}
+              key={data.id}
+              className="namesCard"
+            />
           ))}
         </Slider>
       </div>

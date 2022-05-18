@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import data from "../../../data";
-import Card from "../../Card/Card";
+// import Card from "../../Card/Card";
+import CardCharacter from "../../Card/CardCharacter";
 import "./Characters.css";
 
-function CardCharacter() {
+function Character(props) {
+  const setChoiceCharacter = props.setChoiceCharacter;
   return (
     <div className="charactersGrid">
       {data.map((data) => (
-        <Card
+        <CardCharacter
           className="cardPick"
-          cardFrontDisplay={data.cardFrontDisplay}
+          cardFront={data.cardFront}
           img={data.image}
           key={data.id}
+          id={data.id}
+          setChoiceCharacter={setChoiceCharacter}
         />
       ))}
     </div>
   );
 }
 
-export default CardCharacter;
+export default Character;

@@ -8,9 +8,10 @@ function GameBoard() {
   const [flip, setFlip] = useState(false);
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
-  // // const [choiceName, setChioceName] = useState();
+  const [choiceName, setChoiceName] = useState();
+  const [choiceCharacter, setChoiceCharacter] = useState();
 
-  // //shuffle cards
+  //shuffle cards
   const shuffleCards = () => {
     const shuffledCards = shuffleArray(data);
     setCards(shuffledCards);
@@ -25,16 +26,23 @@ function GameBoard() {
     return array;
   }
   console.log(cards, turns);
-  function flipCard() {
-    () => setFlip(!flip);
-  }
+
+  // flip card
+  // const flipCard = () => setFlip(!flip);
 
   return (
     <div className="gameWrapper">
-      <Names flipCard={flipCard} />
+      <Names
+        // flipCard={flipCard}
+        choiceName={choiceName}
+        setChoiceName={setChoiceName}
+      />
       <div className="characterWrapper">
-        <Characters flipCard={flipCard}
-          cards={cards}/>
+        <Characters
+          // flipCard={flipCard}
+          choiceCharacter={choiceCharacter}
+          setChoiceCharacter={setChoiceCharacter}
+        />
         <div className="points">
           <div className="attempts">
             <h4>Attempts: </h4>

@@ -4,16 +4,6 @@ import Card from "../../Card/Card";
 import "./Characters.css";
 
 function CardCharacter() {
-  // const [cards, setCards] = useState([]);
-  // const [turns, setTurns] = useState(0);
-
-  // //shuffle cards
-  // const shuffleCards = () => {
-  //   const shuffledCards = data.sort(() => Math.random() - 0.5);
-  //   setCards(shuffledCards);
-  //   setTurns(0);
-  // };
-  // console.log(cards, turns);
   return (
     <div className="charactersGrid">
       {data.map((data) => (

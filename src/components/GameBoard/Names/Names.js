@@ -68,7 +68,7 @@ export default function Names() {
       <div className="sliderWrapper">
         <Slider {...settings}>
           {data.map((data) => (
-            <Card characterName={data.characterName} key={data.id} card />
+            <Card characterName={data.characterName} key={data.id} />
           ))}
         </Slider>
       </div>

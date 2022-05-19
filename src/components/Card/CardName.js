@@ -11,9 +11,6 @@ function CardName(props) {
 
     setChoiceName(id);
   };
-  console.log(id);
-
-  // console.log(id);
 
   return (
     <div className="flip-card-container">

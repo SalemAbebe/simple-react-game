@@ -5,6 +5,8 @@ import Names from "./Names/Names";
 import Characters from "./Characters/Characters";
 
 function GameBoard() {
+  const [flipCharacter, setFlipCharacter] = useState(false);
+
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
   const [choiceName, setChoiceName] = useState();
@@ -28,28 +30,35 @@ function GameBoard() {
   console.log(cards, turns);
   console.log(choiceName);
   console.log(choiceCharacter);
+
   const cardCompare = () => {
+    //check if both cards have same id and add 1 to score
     if (choiceName === choiceCharacter) {
+      console.log(true);
       setScore(score + 1);
+    } else {
+      console.log(false);
+      setChoiceName("");
+      setChoiceCharacter("");
     }
+
+    //
   };
 
   return (
     <div className="gameWrapper">
-      <Names
-        // flipCard={flipCard}
-        choiceName={choiceName}
-        setChoiceName={setChoiceName}
-      />
+      <Names choiceName={choiceName} setChoiceName={setChoiceName} />
       <div className="characterWrapper">
         <Characters
-          // flipCard={flipCard}
+          setFlipCharacter={setFlipCharacter}
+          flipCharacter={flipCharacter}
           choiceCharacter={choiceCharacter}
           setChoiceCharacter={setChoiceCharacter}
         />
         <div className="points">
           <div className="attempts">
             <h4>Attempts: </h4>
+            <button onClick={cardCompare}> check </button>
           </div>
           <div className="scores">
             <h4>scores:{score}</h4>

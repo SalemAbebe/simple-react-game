@@ -1,16 +1,32 @@
 import React, { useState } from "react";
+import data from "../../data";
 import "./Card.css";
 
 function CardCharacter(props) {
   const [flipCharacter, setFlipCharacter] = useState(false);
   const setChoiceCharacter = props.setChoiceCharacter;
+  // const setFlipCharacter = props.setFlipCharacter;
+  // const flipCharacter = props.flipCharacter;
   const id = props.id;
 
   //flip character card
-  const flipCardCharacter = (props) => {
+  const flipCardCharacter = () => {
+    const flipTracker = props.flipTracker;
     setFlipCharacter(!flipCharacter);
     setChoiceCharacter(id);
     console.log(id);
+    //setting flip tracking data need to handle it in the parent. now the array needs to be used by the carousel.
+    props.setFlipTracker(
+      flipTracker?.map((result) => {
+        if (result.id === id) {
+          return {
+            id: id,
+            flip: true,
+          };
+        }
+        props.setFlipTracker(newTracker);
+      })
+    );
   };
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Card.css";
 
 function CardName(props) {
@@ -6,11 +6,45 @@ function CardName(props) {
   const choiceName = props.choiceName;
   const setChoiceName = props.setChoiceName;
   const id = props.id;
-  const flipCardName = () => {
-    setFlipName(!flipName);
+  const flipTracker = props.flipTracker;
+  const setFlipTracker = props.setFlipTracker;
+  const cardsFlipped = props.cardsFlipped;
 
-    setChoiceName(id);
+  const flipCardName = () => {
+    if (!cardsFlipped) {
+      setChoiceName(true);
+      let copy = JSON.parse(JSON.stringify(flipTracker));
+      console.log(flipTracker[id]);
+      copy[id].choiceName = true;
+      setFlipTracker(copy);
+      setFlipName(copy[id].choiceName);
+      // console.log(copy);
+    }
+
+    // setChoiceName(id);
   };
+
+  useEffect(() => {
+    if (flipTracker[id] && flipTracker[id].choiceName) {
+      setFlipName(true);
+    } else {
+      setFlipName(false);
+    }
+    // Object.keys(flipTracker).forEach((result, i) => {
+    //   // console.log(result);
+    //   // console.log(id);
+    //   if (JSON.parse(result) === id) {
+    //     // console.log(flipTracker[result]);
+    //     if (flipTracker[result].choiceName === true) {
+    //       setFlipName(true);
+    //     } else {
+    //       setFlipName(false);
+    //     }
+    //     // copy[result] = true;
+    //   }
+    //   // props.setFlipTracker(newTracker);
+    // });
+  }, [flipTracker]);
 
   return (
     <div className="flip-card-container">

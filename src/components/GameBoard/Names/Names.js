@@ -65,6 +65,9 @@ export default function Names(props) {
   };
   const choiceName = props.choiceName;
   const setChoiceName = props.setChoiceName;
+  const flipTracker = props.flipTracker;
+  const setFlipTracker = props.setFlipTracker;
+  const cardsFlipped = props.cardsFlipped;
 
   return (
     <div className="carouselContainer">
@@ -78,6 +81,9 @@ export default function Names(props) {
               key={data.id}
               className="namesCard"
               id={data.id}
+              flipTracker={flipTracker}
+              setFlipTracker={setFlipTracker}
+              cardsFlipped={cardsFlipped}
             />
           ))}
         </Slider>

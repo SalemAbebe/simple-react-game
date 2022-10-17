@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/simple-react-game/static/css/main.8234b898.css",
+    "main.js": "/simple-react-game/static/js/main.6c458603.js",
+    "static/js/787.1712cc9b.chunk.js": "/simple-react-game/static/js/787.1712cc9b.chunk.js",
+    "static/media/slick.svg": "/simple-react-game/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/simple-react-game/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/simple-react-game/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/simple-react-game/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/simple-react-game/index.html",
+    "main.8234b898.css.map": "/simple-react-game/static/css/main.8234b898.css.map",
+    "main.6c458603.js.map": "/simple-react-game/static/js/main.6c458603.js.map",
+    "787.1712cc9b.chunk.js.map": "/simple-react-game/static/js/787.1712cc9b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8234b898.css",
+    "static/js/main.6c458603.js"
+  ]
+}

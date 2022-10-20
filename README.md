@@ -31,16 +31,17 @@ This is a simple desktop guessing game built with react js.
 
 ### Game Rule
  
-
- -Select a card from carousel. Selected card will flipped and a word will be displayed.
+ - Select a card from carousel. Selected card will flipped and a word will be displayed.
  - Pick another card from the bord below and card will be flipped and image will displayed. 
- -If the the name that has been shown on the card from the carousel matches the image, you score a point. 
+ - If the the name that has been shown on the card from the carousel matches the image, you score a point. 
 
 ### My Process
 
-- 
-
-
+- Design the game on figma
+- Set the game rule, 
+- Identify number of cards, build card component,
+- Create carousel that containe name card,
+- build game board that contain carousel(name card), character card and scores.
 
 ### Built with
 

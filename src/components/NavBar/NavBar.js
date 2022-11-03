@@ -3,7 +3,7 @@ import "./NavBar.css";
 function NavBar() {
   return (
     <div className="navBar">
-      <div className="gameHeader">WelCome to NPM WONDER</div>
+      <div className="gameHeader">Welcome to NPM wonder</div>
     </div>
   );
 }
